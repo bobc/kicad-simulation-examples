@@ -151,7 +151,7 @@ F 3 "" H 5500 3350 50  0001 C CNN
 F 4 "X" H 5500 3350 50  0001 C CNN "Spice_Primitive"
 F 5 "NAND" H 5500 3350 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5500 3350 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "C:\\temp3\\spice_v5\\libs\\spice_models.lib" H 5500 3350 50  0001 C CNN "Spice_Lib_File"
+F 7 "../libs/spice_models.lib" H 5500 3350 50  0001 C CNN "Spice_Lib_File"
 	1    5500 3350
 	1    0    0    -1  
 $EndComp

@@ -1,5 +1,5 @@
 .title KiCad schematic
-.include "C:\temp3\spice_v5\libs\spice_models.lib"
+.include "../libs/spice_models.lib"
 VV1 D 0 dc 0 pulse(0 3.3 0 0 0 100m 200m)
 VV2 VDD 0 3.3
 VV3 CLK 0 dc 0 pulse(0 3.3 25m 0 0 50m 100m)

@@ -149,7 +149,7 @@ F 3 "" H 6200 3500 50  0001 C CNN
 F 4 "X" H 6200 3500 50  0001 C CNN "Spice_Primitive"
 F 5 "NAND" H 6200 3500 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 6200 3500 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "C:\\temp3\\spice_v5\\libs\\spice_models.lib" H 6200 3500 50  0001 C CNN "Spice_Lib_File"
+F 7 "../libs/spice_models.lib" H 6200 3500 50  0001 C CNN "Spice_Lib_File"
 	1    6200 3500
 	1    0    0    -1  
 $EndComp
@@ -203,7 +203,7 @@ F 3 "" H 4900 3400 50  0001 C CNN
 F 4 "X" H 4900 3400 50  0001 C CNN "Spice_Primitive"
 F 5 "NAND" H 4900 3400 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4900 3400 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "C:\\temp3\\spice_v5\\libs\\spice_models.lib" H 4900 3400 50  0001 C CNN "Spice_Lib_File"
+F 7 "../libs/spice_models.lib" H 4900 3400 50  0001 C CNN "Spice_Lib_File"
 	1    4900 3400
 	1    0    0    -1  
 $EndComp
@@ -229,7 +229,7 @@ F 3 "" H 4900 4800 50  0001 C CNN
 F 4 "X" H 4900 4800 50  0001 C CNN "Spice_Primitive"
 F 5 "NAND" H 4900 4800 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4900 4800 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "C:\\temp3\\spice_v5\\libs\\spice_models.lib" H 4900 4800 50  0001 C CNN "Spice_Lib_File"
+F 7 "../libs/spice_models.lib" H 4900 4800 50  0001 C CNN "Spice_Lib_File"
 	1    4900 4800
 	1    0    0    -1  
 $EndComp
@@ -255,7 +255,7 @@ F 3 "" H 6200 4700 50  0001 C CNN
 F 4 "X" H 6200 4700 50  0001 C CNN "Spice_Primitive"
 F 5 "NAND" H 6200 4700 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 6200 4700 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "C:\\temp3\\spice_v5\\libs\\spice_models.lib" H 6200 4700 50  0001 C CNN "Spice_Lib_File"
+F 7 "../libs/spice_models.lib" H 6200 4700 50  0001 C CNN "Spice_Lib_File"
 	1    6200 4700
 	1    0    0    -1  
 $EndComp
