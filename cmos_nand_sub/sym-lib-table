@@ -1,3 +1,3 @@
 (sym_lib_table
-  (lib (name sim_logic)(type Legacy)(uri C:/temp3/spice_v5/libs/sim_logic.lib)(options "")(descr ""))
+  (lib (name sim_logic)(type Legacy)(uri ${KIPRJMOD}/../libs/sim_logic.lib)(options "")(descr ""))
 )
