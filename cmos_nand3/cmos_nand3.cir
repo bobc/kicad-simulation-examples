@@ -1,0 +1,19 @@
+.title KiCad schematic
+VV1 B 0 dc 0 pulse(0 3.3 0 0 0 100m 200m)
+VV2 VDD 0 3.3
+MM1 Out A VDD VDD MPMOS
+MM2 Out A 1 1 MNMOS
+MM4 Out B VDD VDD MPMOS
+MM3 1 B 2 2 MNMOS
+VV3 A 0 dc 0 pulse(0 3.3 0 0 0 50m 100m)
+MM6 Out C VDD VDD MPMOS
+MM5 2 C 0 0 MNMOS
+VV4 C 0 dc 0 pulse(0 3.3 0 0 0 200m 400m)
+.tran 1m 400m
+.model mnmos nmos level=8 version=3.3.0
+.model mpmos pmos level=8 version=3.3.0
+.control
+run
+plot v(a)+5 v(b)+10 v(c)+15 v(out)
+.endc
+.end

@@ -9,10 +9,10 @@
 *~
 _autosave-*
 *.tmp
-*-cache.lib
-*-rescue.lib
 *-save.pro
 *-save.kicad_pcb
+*.log
+debug-*
 
 # Netlist files (exported from Eeschema)
 *.net

@@ -1,0 +1,88 @@
+* ----------------------------------------------------------------------------
+* Models for KiCad-ngspice
+* ----------------------------------------------------------------------------
+
+* ----------------------------------------------------------------------------
+* Generic models (public domain)
+* ----------------------------------------------------------------------------
+
+* These are generics for pspice.lib transistors
+.model qnpn npn
+.model qpnp pnp
+
+* These are generics for pspice.lib mosfets
+.model mnmos nmos level=8 version=3.3.0
+.model mpmos pmos level=8 version=3.3.0
+
+* General transistors
+.model npn npn
+.model pnp pnp
+
+* ----------------------------------------------------------------------------
+* Subcircuits (logic gates)
+* ----------------------------------------------------------------------------
+
+.SUBCKT NOT A Out VDD
+* Nodes:
+MM1 Out A VDD VDD MPMOS
+MM2 Out A 0 0 MNMOS
+.ENDS NOT
+
+.SUBCKT NAND A B Out VDD
+* Nodes:
+MM1 Out A VDD VDD MPMOS
+MM2 Out A 1 1 MNMOS
+MM4 Out B VDD VDD MPMOS
+MM3 1 B 0 0 MNMOS
+.ENDS NAND
+
+.SUBCKT NAND3 A B C Out VDD
+MM1 Out A VDD VDD MPMOS
+MM2 Out A 1 1 MNMOS
+MM4 Out B VDD VDD MPMOS
+MM3 1 B 2 2 MNMOS
+MM6 Out C VDD VDD MPMOS
+MM5 2 C 0 0 MNMOS
+.ENDS NAND3
+
+.SUBCKT DLATCH D E Q nQ
+* Nodes:
+XX1 1 nQ Q VDD NAND
+XX2 D E 1 VDD NAND
+XX3 1 E 2 VDD NAND
+XX4 Q 2 nQ VDD NAND
+.ENDS DLATCH
+
+.SUBCKT DFLIPFLOP D CLK Q nQ
+XX1 1 nQ Q VDD NAND
+XX2 4 CLK 1 VDD NAND
+XX3 1 CLK 3 2 VDD NAND3
+XX4 Q 2 nQ VDD NAND
+XX5 3 1 4 VDD NAND
+XX6 2 D 3 VDD NAND
+.ENDS DFLIPFLOP
+
+* ----------------------------------------------------------------------------
+* Manufacturer supplier models (used under license)
+* ----------------------------------------------------------------------------
+
+*ZETEX BC108 Spice model     Last Revision  23/3/00
+*
+*                          (C)  1991 ZETEX PLC
+*
+*   The copyright in this model  and  the design embodied belong to
+*   Zetex PLC ("Zetex"). It is supplied free of charge by Zetex for
+*   the purpose  of research  and design  and may be used or copied
+*   intact (including this notice) for that purpose only. All other
+*   rights  are  reserved.  The model  is believed  accurate but no
+*   condition or warranty as to its  merchantability or fitness for
+*   purpose  is  given  and  no liability  in respect of any use is
+*   accepted by Zetex PLC, its distributors or agent.
+*
+*   Zetex PLC, Fields New Road, Chadderton, Oldham  OL9 8NP
+*
+.MODEL BC108 NPN IS =1.8E-14 ISE=5.0E-14 NF =.9955 NE =1.46 BF =400
++            BR =35.5 IKF=.14 IKR=.03 ISC=1.72E-13 NC =1.27 NR =1.005
++            RB =.56 RE =.6 RC =.25 VAF=80 VAR=12.5
++            CJE=13E-12 CJC=4E-12 VJC=.54 MJC=.33
++            TF =.64E-9 TR =50.72E-9
